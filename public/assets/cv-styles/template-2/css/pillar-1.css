@@ -1,0 +1,108 @@
+.top-section
+{
+  padding: 10px 20px;
+  background-color: #004b8a;
+}
+
+.fw-bold
+{
+  font-weight: bold;
+}
+
+.sidebar-wrapper
+{
+  background-color: #eeeeee;
+  float: right;
+}
+.wrapper {
+  background: #eeeeee;
+}
+
+.sidebar-wrapper .container-block {
+  padding: 15px;
+}
+
+.main-wrapper
+{
+  padding-left: 20px;
+  padding-right: 30px;
+  float: left;
+}
+
+.main-wrapper .section-title,
+.sidebar-wrapper .container-block-title
+{
+  color: #004b8a;
+  margin-bottom: 0;
+  background-color: unset;
+}
+
+.sidebar-wrapper .container-block-title
+{
+  padding: unset;
+}
+
+.sidebar-wrapper,
+.sidebar-wrapper a,
+.sidebar-wrapper .profile-container,
+.sidebar-wrapper .name,
+.sidebar-wrapper .degree,
+.sidebar-wrapper .education-container .meta,
+.sidebar-wrapper .education-container .time,
+.sidebar-wrapper .languages-container .lang-desc
+{
+  color: #222;
+}
+
+.sidebar-wrapper .profile-container {
+  background: unset;
+}
+
+.hr{
+  border-top: solid 1px #ccc;
+  margin: 5px 0 15px 0;
+}
+
+.experiences-section .item
+{
+  margin-bottom: 20px;
+}
+
+.experiences-section .meta
+{
+  float: left;
+  width: 10%;
+}
+
+.experiences-section .details
+{
+  float: right;
+  width: 85%;
+}
+
+.main-wrapper .job-title
+{
+  margin-bottom: 2px;
+}
+
+.skillset .item {
+  margin-left: 15%;
+}
+
+
+@media print {
+  body{
+    width: 210mm;
+    height: 297mm;
+  }
+  .sidebar-wrapper {
+    width: 60mm;
+    height: 100%;
+    margin: 0;
+  }
+  .main-wrapper {
+    height: 100%;
+    width: 133mm;
+    margin: 0;
+  }
+}

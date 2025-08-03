@@ -1,0 +1,23 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "GetYourCV CV Maker",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "GetYourCV",
+  "start_url": "/",
+  "theme_color": "#0057ff",
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "id": "GetYourCV",
+  "description": "GetYourCV is a free CV &amp; Resume Builder"
+}

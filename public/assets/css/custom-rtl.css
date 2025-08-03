@@ -1,0 +1,27 @@
+:root{
+    /*--bs-font-sans-serif: 'Noto Naskh Arabic', sans-serif;;*/
+    --bs-font-sans-serif: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+body{
+    background: #f7f7f7;
+}
+
+.form-control
+{
+    border-radius: unset;
+    border: 2px solid #ddd;
+}
+
+@media (max-width: 900px) 
+{
+    #pdf-canvas
+    {
+        width:100vw;
+    }
+}

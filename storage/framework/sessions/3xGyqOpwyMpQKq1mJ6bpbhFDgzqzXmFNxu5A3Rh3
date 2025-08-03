@@ -1,0 +1,26 @@
+a:8:{s:9:"_previous";a:1:{s:3:"url";s:24:"http://127.0.0.1:8000/cv";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}s:6:"_token";s:40:"OUzGRkm2jATTZfFZJHLlM35mYhyrwWZeYbS7mhIt";s:8:"fileName";s:13:"688f723856231";s:11:"currentStep";i:5;s:12:"selectedLang";s:2:"ar";s:16:"selectedTemplate";s:10:"simple-dev";s:2:"cv";O:8:"stdClass":37:{s:5:"fresh";b:1;s:6:"_token";s:40:"OUzGRkm2jATTZfFZJHLlM35mYhyrwWZeYbS7mhIt";s:14:"remove_picture";s:1:"0";s:4:"name";s:15:"Atef Badreddine";s:5:"email";s:26:"atefbadreddine05@gmail.com";s:5:"phone";s:8:"26013369";s:11:"current_job";s:3:"Dev";s:7:"address";s:46:"cite el hana appt 1 Hedi nouira Ariana Tunisie";s:11:"nationality";s:5:"TUNIS";s:14:"marital_status";N;s:10:"birth_date";s:10:"05-05-2001";s:12:"cv_text_size";i:16;s:4:"uuid";O:35:"Ramsey\Uuid\Lazy\LazyUuidFromString":1:{s:6:"string";s:36:"6ed2f0c5-907a-45e8-ad69-92c5a15deb65";}s:7:"picture";s:21:"pic-688f7440f1ffb.jpg";s:19:"langs_section_title";s:12:"اللغات";s:8:"language";N;s:5:"level";s:10:"مبتدئ";s:20:"skills_section_title";s:16:"المهارات";s:5:"skill";N;s:21:"summary_section_title";s:25:"الملخص المهني";s:18:"profession_summary";s:53:"thsi has been a test for cv maker 
+• zfzf
+• afa";s:19:"certs_section_title";s:16:"الشهادات";s:4:"cert";s:14:"free code camp";s:18:"refs_section_title";s:14:"المراجع";s:3:"ref";s:19:"refrneced by anouar";s:23:"interests_section_title";s:39:"الإهتمامات والهوايات";s:8:"interest";N;s:18:"customSectionTitle";N;s:20:"customSectionDetails";N;s:6:"skills";a:15:{i:1;a:1:{s:5:"skill";s:12:"aaaaaaaaaaaa";}i:2;a:1:{s:5:"skill";s:10:"aaaaaaaaaa";}i:3;a:1:{s:5:"skill";s:37:"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";}i:4;a:1:{s:5:"skill";s:6:"aaazfz";}i:5;a:1:{s:5:"skill";s:2:"zf";}i:6;a:1:{s:5:"skill";s:2:"fa";}i:7;a:1:{s:5:"skill";s:2:"ff";}i:8;a:1:{s:5:"skill";s:3:"faz";}i:9;a:1:{s:5:"skill";s:3:"zfz";}i:10;a:1:{s:5:"skill";s:11:"zzzzzzzzzzz";}i:11;a:1:{s:5:"skill";s:5:"afafz";}i:12;a:1:{s:5:"skill";s:12:"ffffffffffff";}i:13;a:1:{s:5:"skill";s:13:"fffffffffffff";}i:14;a:1:{s:5:"skill";s:25:"fffffffffffffffffffffffff";}i:15;a:1:{s:5:"skill";s:7:"ffffffa";}}s:23:"education_section_title";s:9:"Education";s:18:"jobs_section_title";s:31:"الخبرات الوظيفية";s:10:"educations";a:2:{i:1;a:6:{s:6:"degree";s:14:"PREPA INTEGREE";s:10:"university";s:3:"FST";s:14:"education_city";s:6:"MANARA";s:9:"startYear";s:10:"05-05-2001";s:7:"endYear";s:10:"05-05-2001";s:7:"details";s:15:"• fz
+• mpi";}i:2;a:6:{s:6:"degree";s:8:"Engineer";s:10:"university";s:6:"ESPRIT";s:14:"education_city";s:6:"ARIANA";s:9:"startYear";s:10:"05-05-2000";s:7:"endYear";s:10:"05-05-2001";s:7:"details";s:159:"• FZZF
+• FZA
+• f
+• z
+• a
+• azf
+• azf
+• azf
+• azf
+• faz
+• faz
+• afz
+• za
+• faz
+• az
+• z
+• fa
+• zaf
+• fza";}}s:4:"jobs";a:1:{i:1;a:6:{s:9:"job_title";s:9:"DEVELOPER";s:8:"employer";s:5:"tunav";s:8:"job_city";s:7:"chargia";s:12:"jobStartYear";s:4:"2025";s:10:"jobEndYear";s:4:"2025";s:7:"details";s:24:"• fafa
+• faz
+• z";}}s:9:"languages";a:3:{i:1;a:2:{s:8:"language";s:6:"arabic";s:5:"level";s:10:"مبتدئ";}i:2;a:2:{s:8:"language";s:7:"english";s:5:"level";s:10:"مبتدئ";}i:3;a:2:{s:8:"language";s:6:"french";s:5:"level";s:2:"B2";}}s:9:"interests";a:4:{i:1;a:1:{s:8:"interest";s:5:"sport";}i:2;a:1:{s:8:"interest";s:6:"gaming";}i:3;a:1:{s:8:"interest";s:13:"doing nothing";}i:4;a:1:{s:8:"interest";s:15:"procrastination";}}s:14:"customSections";a:1:{i:1;a:2:{s:18:"customSectionTitle";s:6:"custom";s:20:"customSectionDetails";s:42:"this is custom section
+• tezst
+• aaa";}}}}

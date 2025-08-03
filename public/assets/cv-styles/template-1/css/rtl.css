@@ -1,0 +1,23 @@
+*, body{
+    direction: rtl;
+    font-family: "cairo", sans-serif;
+}
+.sidebar-wrapper
+{
+  float: right;
+}
+
+.main-wrapper
+{
+  float: left;
+}
+
+.experiences-section .meta
+{
+  float: right;
+}
+
+.experiences-section .details
+{
+  float: left;
+}

@@ -1,0 +1,88 @@
+.main-wrapper {
+  float: right;
+}
+
+.sidebar-wrapper {
+  float: left;
+}
+
+.wrapper {
+  background: #98b9d3;
+}
+
+.top-section
+{
+    width: 100%;
+    padding:25px;
+    /* padding-left: 45px; */
+}
+
+.top-section .float-right
+{
+    float: left;
+    width: 25%;
+}
+
+
+.top-section .name,
+.top-section .tagline
+{
+    margin: 0;
+}
+
+.top-section .float-left
+{
+    float:right;
+    width: 70%;
+    padding: 35px 0;
+}
+
+.top-section .name
+{
+    font-size: 40px;
+}
+
+.top-section .tagline
+{
+    font-size: 20px;
+}
+
+.sidebar-wrapper
+{
+  background-color: #98b9d3;
+}
+
+.top-section
+{
+  background-color: #888;
+}
+
+.sidebar-wrapper .container-block-title
+{
+    color:#000;
+    margin-bottom: 10px;
+}
+
+.sidebar-wrapper .container-block-title.contact-info-title
+{
+    padding:20px 0 !important;
+    font-size: 23px;
+}
+
+.experiences-section .meta
+{
+  float: none;
+  width: fit-content;
+}
+
+.experiences-section .details
+{
+  float: none;
+  width: fit-content;
+}
+
+.main-wrapper .section-title
+{
+    margin-bottom: 20px;
+    font-weight: bold;
+}

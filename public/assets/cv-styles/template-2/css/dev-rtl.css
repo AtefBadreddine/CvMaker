@@ -1,0 +1,33 @@
+.experiences-section .meta
+{
+  float: none;
+}
+
+.experiences-section .details
+{
+  float: none;
+}
+
+.top-section
+{
+    /* padding-right: 45px; */
+    /* padding-left:0 */
+}
+
+.top-section .float-right
+{
+    float: right;
+}
+
+.top-section .float-left
+{
+    float:left;
+}
+
+.main-wrapper {
+  float: left;
+}
+
+.sidebar-wrapper {
+  float: right;
+}
