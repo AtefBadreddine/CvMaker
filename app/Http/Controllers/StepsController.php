@@ -76,8 +76,8 @@ class StepsController extends Controller
     public function autoSave(Request $request)
     {
         try {
-            Log::info('autoSave triggered');
 
+            $start = microtime(true);
 
             $request->validate([
                 'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10240 KB = 10MB
@@ -88,14 +88,13 @@ class StepsController extends Controller
 
             // If picture was removed
             if ($request->input('remove_picture') === '1' && ! $request->hasFile('picture')) {
-                Log::info('User removed the picture');
+
 
                 $cv = Session::get('cv');
                 if ($cv && $cv->picture) {
                     $path = public_path("storage/cv/pictures/" . $cv->picture);
                     if (file_exists($path)) {
                         unlink($path);
-                        Log::info("Deleted old picture", ['filename' => $cv->picture]);
                     }
                     $safe['picture'] = null;
                 }
@@ -103,12 +102,15 @@ class StepsController extends Controller
 
             // Handle picture upload
             if ($request->hasFile('picture')) {
-                Log::info('Picture file received');
                 try {
+
+
                     $path = public_path("storage/cv/pictures/");
                     $name = uniqid("pic-") . "." . $request->picture->extension();
                     Image::make($request->file('picture'))->resize(150, 150)->save($path . $name);
-                    Log::info("Image saved", ['filename' => $name]);
+
+
+
                     $safe['picture'] = $name;
                 } catch (\Exception $e) {
                     Log::error("Image upload failed", ['error' => $e->getMessage()]);
@@ -120,7 +122,6 @@ class StepsController extends Controller
             if ($color = $request->input('cv_color')) {
                 $safe['darker_color'] = $this->darkenColor($color, 20);
                 $safe['lighter_color'] = $this->lightenColor($color, 90);
-                Log::info('Color processed', ['cv_color' => $color]);
 
                 if ($request->wantsJson() || $request->is('api/*')) {
                     return response()->json($safe);
@@ -166,7 +167,112 @@ class StepsController extends Controller
                 'path' => $name . '1.pdf'
             ]);
 
-            Log::info("CV saved/updated in DB", ['uuid' => $cv->uuid]);
+            $duration = microtime(true) - $start;
+            Log::info("Auto save: {$duration} seconds", ['filename' => $name]);
+
+            return redirect('/spatieTest');
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return response()->json([
+                'errors' => $e->errors(),
+            ], 422);
+        }
+        catch (\Exception $e) {
+            Log::error("autoSave error", [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+
+            return response()->json(['error' => 'Something went wrong'], 500);
+        }
+    }
+
+    public function autoSavePhoto(Request $request)
+    {
+        try {
+
+            $start = microtime(true);
+
+            $request->validate([
+                'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10240 KB = 10MB
+            ]);
+
+
+            $safe = $request->input();
+
+            // If picture was removed
+            if ($request->input('remove_picture') === '1' && ! $request->hasFile('picture')) {
+
+
+                $cv = Session::get('cv');
+                if ($cv && $cv->picture) {
+                    $path = public_path("storage/cv/pictures/" . $cv->picture);
+                    if (file_exists($path)) {
+                        unlink($path);
+                    }
+                    $safe['picture'] = null;
+                }
+            }
+
+            // Handle picture upload
+            if ($request->hasFile('picture')) {
+                try {
+
+
+                    $path = public_path("storage/cv/pictures/");
+                    $name = uniqid("pic-") . "." . $request->picture->extension();
+                    Image::make($request->file('picture'))->resize(150, 150)->save($path . $name);
+
+                    $safe['picture'] = $name;
+                } catch (\Exception $e) {
+                    Log::error("Image upload failed", ['error' => $e->getMessage()]);
+                    return response()->json(['error' => 'Image upload failed'], 500);
+                }
+            }
+
+
+
+            // JSON or API logic
+            if ($request->wantsJson() || $request->is('api/*')) {
+                $cv = Cache::has('cv') ? (object) array_merge((array)Cache::get('cv'), $safe) : (object) $safe;
+                $cv->cv_text_size = $cv->cv_text_size ?? 16;
+
+                Cache::put("cv", $cv, 600);
+
+                return response()->json($cv);
+            }
+
+            // Session logic
+            $cv = Session::has('cv') ? (object) array_merge((array)Session::get('cv'), $safe) : (object) $safe;
+            $cv->cv_text_size = $cv->cv_text_size ?? 16;
+
+            $request->session()->put("currentStep", 5);
+
+            if (!isset($cv->uuid) || $cv->uuid == '') {
+                $cv->uuid = Str::uuid();
+            }
+
+            $ids = Cookie::has('ids') ? json_decode(Cookie::get('ids')) : [];
+            if (!in_array($cv->uuid, $ids)) {
+                $ids[] = $cv->uuid;
+                Cookie::queue('ids', json_encode($ids));
+            }
+
+            $request->session()->put("cv", $cv);
+            $name = session()->get('fileName');
+
+            CV::updateOrCreate([
+                'uuid' => $cv->uuid
+            ], [
+                'user_id' => auth()->id(),
+                'title' => date('Y-m-d H:i a'),
+                'cv_data' => json_encode($cv, JSON_UNESCAPED_UNICODE),
+                'lang' => session()->get('selectedLang'),
+                'path' => $name . '1.pdf'
+            ]);
+
+            $duration = microtime(true) - $start;
+            Log::info("Auto save photo: {$duration} seconds", ['filename' => $name]);
 
             return redirect('/spatieTest');
 
@@ -405,17 +511,14 @@ class StepsController extends Controller
 
     public function showPdfPreview(Request $request)
     {
+        $start = microtime(true);
         $sessionFile = Session::get('fileName');
         $queryPdf = $request->query('pdf');
 
         $path = $queryPdf ?? asset('storage') . '/cvs/' . $sessionFile . '1.pdf';
 
-        Log::info('Rendering PDF preview', [
-            'query_pdf' => $queryPdf,
-            'session_file' => $sessionFile,
-            'final_path' => $path,
-        ]);
-
+        $duration = microtime(true) - $start;
+        Log::info("Show pdf preview : {$duration} seconds");
         return view('pages.pdf-to-png', compact('path'));
     }
 
@@ -492,6 +595,7 @@ class StepsController extends Controller
     public function spatieTest()
     {
 
+        $start = microtime(true);
         if(!Session::has('cv')) return redirect("/");
         $cv = new MyCv(Session::get('cv'));
         Session::put("currentStep", 5);
@@ -500,13 +604,25 @@ class StepsController extends Controller
 
 
 
-        $pdf = SpatiePDF::view('templates.' . Session::get('selectedTemplate'), compact('cv'))
+
+
+        SpatiePDF::view('templates.' . Session::get('selectedTemplate'), compact('cv'))
             ->format('A4')
+            /*->withBrowsershot(function (\Spatie\Browsershot\Browsershot $browsershot) {
+                $browsershot
+                    ->setNodeBinary('/home/topcv/.nvm/versions/node/v22.18.0/bin/node')
+                    ->setNpmBinary('/home/topcv/.nvm/versions/node/v22.18.0/bin/npm');
+            })*/
             ->margins(0, 0, 0, 0) // top, right, bottom, left
             ->save(public_path('storage/cvs/' . $name . '1.pdf'));
 
+
+
+
         if(request()->ajax())
         {
+            $duration = microtime(true) - $start;
+            Log::info("Spatie Test: {$duration} seconds", ['filename' => $name . '1.pdf']);
             //return $pdf->stream('document.pdf')->header('Content-Type', 'application/pdf');
             return TRUE;
         }

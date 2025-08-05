@@ -34,7 +34,7 @@
                                         <i class="handler bi bi-arrows-move text-dark px-2" style="cursor:move"></i>
                                       <span class="hashNumber"><?php echo e($loop->iteration); ?></span>
                                     </button>
-                                  	
+
                                 </h2>
                                 <div id="collapseBox<?php echo e($loop->iteration+1); ?>" class="accordion-collapse collapse" data-bs-parent="#sortableList">
                                     <div id="educations-<?php echo e($loop->iteration+1); ?>" class="row g-3 deletable p-3">
@@ -50,18 +50,19 @@
                                                 <label for="inputCity" class="form-label fw-bold"><?php echo e(__('labels.city')); ?></label>
                                                 <input type="text" class="form-control form-control-lg rounded-pill" id="inputCity" name="educations[][education_city]" value="<?php echo e($education['education_city'] ?? ""); ?>">
                                             </div>
-                                            <div class="col-md-6">
-                                                <label for="inputStartYear" class="form-label fw-bold"><?php echo e(__('labels.start_date')); ?></label>
-                                                <input type="text" class="form-control form-control-lg rounded-pill" id="inputStartYear" name="educations[][startYear]" value="<?php echo e($education['startYear']); ?>">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEndYear" class="form-label fw-bold"><?php echo e(__('labels.end_date')); ?></label>
-                                                <input type="text" class="form-control form-control-lg rounded-pill" id="inputEndYear" name="educations[][endYear]" value="<?php echo e($education['endYear']); ?>">
-                                            </div>
-                                          	<div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <label for="inputStartYear" class="form-label fw-bold"><?php echo e(__('labels.start_date')); ?></label>
+                                            <input type="text" class="form-control form-control-lg rounded-pill" id="inputStartYear" name="educations[][startYear]" value="<?php echo e($education['startYear'] ?? ""); ?>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputEndYear" class="form-label fw-bold"><?php echo e(__('labels.end_date')); ?></label>
+                                            <input type="text" class="form-control form-control-lg rounded-pill" id="inputEndYear" name="educations[][endYear]" value="<?php echo e($education['endYear'] ?? ""); ?>">
+                                        </div>
+
+                                        <div class="col-md-12">
                                                 <label for="textareaDetails" class="form-label fw-bold"><?php echo e(__('labels.details')); ?></label>
                                                 <button class="btn btn-sm btn-primary addBullet" type="button"><?php echo e(__('labels.add_bullet')); ?> •</button>
-                                                <textarea class="form-control area1" id="textareaDetails" rows="3" name="educations[][details]"><?php echo e($education['details']); ?></textarea>
+                                                <textarea class="form-control area1" id="textareaDetails" rows="3" name="educations[][details]"><?php echo e($education['details'] ?? ""); ?></textarea>
                                             </div>
                                             <button type="button" class="btn btn-outline-danger border-0 removeElement">
                                                 <i class="bi bi-trash3 fs-5 mx-2"></i>

@@ -32,7 +32,7 @@
                         {{-- <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    
+
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#sortableList">
@@ -77,7 +77,7 @@
                                         <i class="handler bi bi-arrows-move text-dark px-2" style="cursor:move"></i>
                                       <span class="hashNumber">{{$loop->iteration}}</span>
                                     </button>
-                                  	
+
                                 </h2>
                                 <div id="collapseBox{{$loop->iteration+1}}" class="accordion-collapse collapse" data-bs-parent="#sortableList">
                                     <div id="educations-{{$loop->iteration+1}}" class="row g-3 deletable p-3">
@@ -93,18 +93,19 @@
                                                 <label for="inputCity" class="form-label fw-bold">{{ __('labels.city') }}</label>
                                                 <input type="text" class="form-control form-control-lg rounded-pill" id="inputCity" name="educations[][education_city]" value="{{ $education['education_city'] ?? "" }}">
                                             </div>
-                                            <div class="col-md-6">
-                                                <label for="inputStartYear" class="form-label fw-bold">{{ __('labels.start_date') }}</label>
-                                                <input type="text" class="form-control form-control-lg rounded-pill" id="inputStartYear" name="educations[][startYear]" value="{{ $education['startYear'] }}">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEndYear" class="form-label fw-bold">{{ __('labels.end_date') }}</label>
-                                                <input type="text" class="form-control form-control-lg rounded-pill" id="inputEndYear" name="educations[][endYear]" value="{{ $education['endYear'] }}">
-                                            </div>
-                                          	<div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <label for="inputStartYear" class="form-label fw-bold">{{ __('labels.start_date') }}</label>
+                                            <input type="text" class="form-control form-control-lg rounded-pill" id="inputStartYear" name="educations[][startYear]" value="{{ $education['startYear'] ?? "" }}">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputEndYear" class="form-label fw-bold">{{ __('labels.end_date') }}</label>
+                                            <input type="text" class="form-control form-control-lg rounded-pill" id="inputEndYear" name="educations[][endYear]" value="{{ $education['endYear'] ?? "" }}">
+                                        </div>
+
+                                        <div class="col-md-12">
                                                 <label for="textareaDetails" class="form-label fw-bold">{{__('labels.details')}}</label>
                                                 <button class="btn btn-sm btn-primary addBullet" type="button">{{__('labels.add_bullet')}} •</button>
-                                                <textarea class="form-control area1" id="textareaDetails" rows="3" name="educations[][details]">{{$education['details']}}</textarea>
+                                                <textarea class="form-control area1" id="textareaDetails" rows="3" name="educations[][details]">{{$education['details'] ?? ""}}</textarea>
                                             </div>
                                             <button type="button" class="btn btn-outline-danger border-0 removeElement">
                                                 <i class="bi bi-trash3 fs-5 mx-2"></i>

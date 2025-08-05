@@ -153,7 +153,7 @@
             const maxSize = maxSizeMB * 1024 * 1024;
             const preview = document.getElementById('imagePreview');
             const removeBtn = document.getElementById('removeButton');
-            const errorMsg = document.getElementById(' picture-error');
+            const errorMsg = document.getElementById('picture-error');
 
             if (!file) {
                 return;

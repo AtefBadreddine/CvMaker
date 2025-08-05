@@ -81,6 +81,7 @@ Route::controller(StepsController::class)->middleware(Language::class)->prefix("
 
 Route::post('setLang', SetLanguageController::class)->name("setLang");
 Route::post('autoSave', [StepsController::class, 'autoSave'])->name("autoSave");
+Route::post('autoSave/photo', [StepsController::class, 'autoSavePhoto'])->name("autoSavePhoto");
 
 
 Route::middleware(['auth', Language::class, IsAdmin::class])

@@ -1,0 +1,270 @@
+[2025-08-04 10:18:45] local.ERROR: Attempt to read property "type" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"type\" on null at D:\\laragon\\www\\cvmaker\\app\\Http\\Middleware\\IsAdmin.php:18)
+[stacktrace]
+#0 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'D:\\\\laragon\\\\www\\\\...', 18)
+#1 D:\\laragon\\www\\cvmaker\\app\\Http\\Middleware\\IsAdmin.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'D:\\\\laragon\\\\www\\\\...', 18)
+#2 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\IsAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#3 D:\\laragon\\www\\cvmaker\\app\\Http\\Middleware\\Language.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#4 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Language->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#5 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#7 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#13 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#21 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#22 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#23 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#24 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#41 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#42 D:\\laragon\\www\\cvmaker\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#43 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\laragon\\\\www\\\\...')
+#44 {main}
+"} 
+[2025-08-04 10:19:23] local.ERROR: Attempt to read property "name" on null {"view":{"view":"D:\\laragon\\www\\cvmaker\\resources\\views\\dashboard\\layout.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-18642670 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1400</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-18642670\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","counts":"<pre class=sf-dump id=sf-dump-1719892664 data-indent-pad=\"  \"><span class=sf-dump-note>array:4</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>users</span>\" => <span class=sf-dump-num>165</span>
+  \"<span class=sf-dump-key>rmcvs</span>\" => <span class=sf-dump-num>34</span>
+  \"<span class=sf-dump-key>userscvs</span>\" => <span class=sf-dump-num>0</span>
+  \"<span class=sf-dump-key>visits</span>\" => <span class=sf-dump-num>0</span>
+</samp>]
+</pre><script>Sfdump(\"sf-dump-1719892664\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Attempt to read property \"name\" on null at D:\\laragon\\www\\cvmaker\\resources\\views\\dashboard\\layout.blade.php:68)
+[stacktrace]
+#0 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'D:\\\\laragon\\\\www\\\\...', 68)
+#1 D:\\laragon\\www\\cvmaker\\resources\\views\\dashboard\\layout.blade.php(68): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'D:\\\\laragon\\\\www\\\\...', 68)
+#2 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('D:\\\\laragon\\\\www\\\\...')
+#3 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\laragon\\\\www\\\\...', Array)
+#5 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#6 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#7 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#8 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#9 D:\\laragon\\www\\cvmaker\\resources\\views\\dashboard\\index.blade.php(44): Illuminate\\View\\View->render()
+#10 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('D:\\\\laragon\\\\www\\\\...')
+#11 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#12 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\laragon\\\\www\\\\...', Array)
+#13 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#14 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#15 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#16 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#17 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#18 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#19 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(911): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#20 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(878): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#21 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#22 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\laragon\\www\\cvmaker\\app\\Http\\Middleware\\IsAdmin.php(18): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\IsAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\laragon\\www\\cvmaker\\app\\Http\\Middleware\\Language.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Language->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#35 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#43 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#44 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#45 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#46 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#63 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#64 D:\\laragon\\www\\cvmaker\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#65 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\laragon\\\\www\\\\...')
+#66 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Attempt to read property \"name\" on null at D:\\laragon\\www\\cvmaker\\storage\\framework\\views\\a3c66e40866f744613fcd3f53d5bf9c2.php:68)
+[stacktrace]
+#0 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'D:\\\\laragon\\\\www\\\\...', 68)
+#1 D:\\laragon\\www\\cvmaker\\storage\\framework\\views\\a3c66e40866f744613fcd3f53d5bf9c2.php(68): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'D:\\\\laragon\\\\www\\\\...', 68)
+#2 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('D:\\\\laragon\\\\www\\\\...')
+#3 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\laragon\\\\www\\\\...', Array)
+#5 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#6 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#7 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#8 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#9 D:\\laragon\\www\\cvmaker\\storage\\framework\\views\\daf9af64147122e8f3a295e53511e450.php(44): Illuminate\\View\\View->render()
+#10 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('D:\\\\laragon\\\\www\\\\...')
+#11 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#12 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\laragon\\\\www\\\\...', Array)
+#13 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#14 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#15 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#16 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#17 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#18 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#19 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(911): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#20 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(878): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#21 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#22 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\laragon\\www\\cvmaker\\app\\Http\\Middleware\\IsAdmin.php(18): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\IsAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\laragon\\www\\cvmaker\\app\\Http\\Middleware\\Language.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Language->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#35 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#43 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#44 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#45 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#46 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#63 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#64 D:\\laragon\\www\\cvmaker\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#65 D:\\laragon\\www\\cvmaker\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\laragon\\\\www\\\\...')
+#66 {main}
+"} 
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:20:57] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:20:57] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:20:57] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:20:57] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:20:57] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:20:57] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:21:10] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:21:10] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:21:10] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:21:10] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:21:10] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang {"1":{"code":"en","name":"English","flag":"us"}}  
+[2025-08-04 10:21:10] local.INFO: lang [{"code":"ar","name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","flag":"sa"}]  
+[2025-08-04 10:23:42] local.INFO: autoSave triggered  
+[2025-08-04 10:23:42] local.INFO: CV saved/updated in DB {"uuid":{"Ramsey\\Uuid\\Lazy\\LazyUuidFromString":"6ed2f0c5-907a-45e8-ad69-92c5a15deb65"}} 
+[2025-08-04 10:23:50] local.INFO: Rendering PDF preview {"query_pdf":null,"session_file":"688f723856231","final_path":"http://127.0.0.1:8000/storage/cvs/688f7238562311.pdf"} 
