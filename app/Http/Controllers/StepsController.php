@@ -191,7 +191,6 @@ class StepsController extends Controller
     {
         try {
 
-            $start = microtime(true);
 
             $request->validate([
                 'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10240 KB = 10MB
@@ -271,8 +270,6 @@ class StepsController extends Controller
                 'path' => $name . '1.pdf'
             ]);
 
-            $duration = microtime(true) - $start;
-            Log::info("Auto save photo: {$duration} seconds", ['filename' => $name]);
 
             return redirect('/spatieTest');
 
@@ -511,14 +508,12 @@ class StepsController extends Controller
 
     public function showPdfPreview(Request $request)
     {
-        $start = microtime(true);
+
         $sessionFile = Session::get('fileName');
         $queryPdf = $request->query('pdf');
 
         $path = $queryPdf ?? asset('storage') . '/cvs/' . $sessionFile . '1.pdf';
 
-        $duration = microtime(true) - $start;
-        Log::info("Show pdf preview : {$duration} seconds");
         return view('pages.pdf-to-png', compact('path'));
     }
 
@@ -595,7 +590,7 @@ class StepsController extends Controller
     public function spatieTest()
     {
 
-        $start = microtime(true);
+
         if(!Session::has('cv')) return redirect("/");
         $cv = new MyCv(Session::get('cv'));
         Session::put("currentStep", 5);
@@ -621,8 +616,6 @@ class StepsController extends Controller
 
         if(request()->ajax())
         {
-            $duration = microtime(true) - $start;
-            Log::info("Spatie Test: {$duration} seconds", ['filename' => $name . '1.pdf']);
             //return $pdf->stream('document.pdf')->header('Content-Type', 'application/pdf');
             return TRUE;
         }
