@@ -24,15 +24,14 @@
         <?php if(isset($cv->jobs)): ?>
             <?php $__currentLoopData = $cv->jobs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $job): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
-                    <td style="padding-top: 20px"><span class="title"><?php echo e($job['job_title'] ?? ""); ?></span></td>
+                    <td style="padding-top: 5px"><span class="title"><?php echo e($job['job_title'] ?? ""); ?></span></td>
                 </tr>
                 <tr>
                     <td class="gray-text"><?php echo e($job['jobStartYear'] ?? ""); ?><?php echo e(isset($job['jobEndYear']) ? ' - '.$job['jobEndYear'] : ""); ?></td>
                 </tr>
                 <tr>
-                    <td scope="col" style="padding-bottom: 10px">
+                    <td scope="col">
                         <span class="gray-text"><?php echo e($job['employer'] ?? ""); ?><?php echo e(isset($job['job_city']) ? ', '.$job['job_city'] : ""); ?></span>
-                        <br> <br>
                         <p class="details"><?php echo str_replace("\n","<br/>",$job['details'] ?? ""); ?></p>
                     </td>
                 </tr>
@@ -57,10 +56,9 @@
                     <td scope="col">
                         <strong class="title"><?php echo e($education['degree'] ?? ""); ?></strong>
                         <br>
-                        <br>
+                        <br/>
                         <?php echo e($education['university'] ?? ""); ?><?php echo e(isset($education['education_city']) ? ', '.$education['education_city'] : ""); ?>
 
-                        <br />
                         <p class="details"><?php echo str_replace("\n","<br/>",$education['details'] ?? ""); ?></p>
                     </td>
                 </tr>

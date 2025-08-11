@@ -6,7 +6,7 @@
     </thead>
     <tbody>
     <tr>
-        <td style="padding-top:5px">{{$cv->current_job ?? ""}}</td>
+        <td >{{$cv->current_job ?? ""}}</td>
     </tr>
     </tbody>
 </table>
@@ -37,7 +37,7 @@
                     <td style="padding-bottom:0;padding-top:5px"><span>{{$job['jobStartYear'] ?? ""}}{{isset($job['jobEndYear']) ? ' - '.$job['jobEndYear'] : ""}}{{isset($job['job_city']) ? ' | '.$job['job_city'] : ""}}</span></td>
                 </tr>
                 <tr>
-                    <td style="padding-top:5px"><p class="details">{!!str_replace("\n","<br/>",$job['details'] ?? "")!!}</p></td>
+                    <td><p class="details">{!!str_replace("\n","<br/>",$job['details'] ?? "")!!}</p></td>
                 </tr>
             @endforeach
         @endisset
@@ -62,7 +62,7 @@
                     <td style="padding-bottom:0;padding-top:5px">{{$education['degree'] ?? ""}}{{isset($education['endYear']) ? ', '.$education['endYear'] : ""}}</td>
                 </tr>
                 <tr>
-                    <td style="padding-top:10px"><p class="details">{!!str_replace("\n","<br/>",$education['details'] ?? "")!!}</p></td>
+                    <td><p class="details">{!!str_replace("\n","<br/>",$education['details'] ?? "")!!}</p></td>
                 </tr>
             @endforeach
         @endisset
@@ -75,7 +75,7 @@
         <table >
             <thead>
             <tr>
-                <th scope="col" class="section-title" style="padding-bottom:20px;padding-top:20px">{{$section['customSectionTitle'] ?? ""}}</th>
+                <th scope="col" class="section-title" >{{$section['customSectionTitle'] ?? ""}}</th>
             </tr>
             </thead>
             <tbody>

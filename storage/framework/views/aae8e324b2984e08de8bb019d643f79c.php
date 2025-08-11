@@ -24,34 +24,37 @@
             <div class="col-sm-12 mb-4">
                 <label for="picture" class="form-label fw-bold d-block"><?php echo e(__('labels.add_photo')); ?></label>
 
-                
-                <div class="mb-2 position-relative d-inline-block" id="imagePreviewContainer" style="max-width: 150px;">
+                <!-- Image Container -->
+                <div class="photo-upload-container position-relative d-inline-block" style="width: 150px; height: 150px;">
+                    <!-- Remove Button -->
                     <button type="button"
                             id="removeButton"
-                            class="position-absolute remove-btn"
-                            onclick="removePicture()"
+                            class="remove-btn position-absolute top-0 end-0 m-1"
+                            onclick="removePicture(event)"
                             aria-label="Remove"
-                            style=" display: <?php echo e(isset($cv->picture) ? 'block' : 'none'); ?>; ">
+                            style="display: <?php echo e(isset($cv->picture) ? 'block' : 'none'); ?>;">
                         &times;
                     </button>
+
                     <input type="hidden" name="remove_picture" id="removePictureFlag" value="0">
 
+                    <!-- Image Preview -->
+                    <img id="imagePreview"
+                         src="<?php echo e(isset($cv->picture) ? asset('storage/cv/pictures/' . $cv->picture) : asset('assets/images/avatar.png')); ?>"
+                         class="rounded w-100 h-100 object-fit-cover" />
 
-                <?php if(isset($cv->picture)): ?>
-                        <img id="imagePreview" src="<?php echo e(asset('storage/cv/pictures/' . $cv->picture)); ?>" class="rounded"
-                             style="width: 150px; height: 150px;" />
-                    <?php else: ?>
-                        <img id="imagePreview" src="<?php echo e(asset('assets/images/avatar.png')); ?>" class="rounded"
-                             style="width: 150px; height: 150px;" />
-                    <?php endif; ?>
+                    <!-- Hover Overlay -->
+                    <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center rounded">
+                        <i class="bi bi-camera-fill fs-2 text-white"></i>
+                    </div>
+
+                    <!-- Hidden File Input -->
+                    <input type="file" id="picture" name="picture" accept="image/*" class="d-none" onchange="previewPicture(event)">
                 </div>
 
-                
-                <input class="form-control" type="file" id="picture" name="picture" accept="image/*" onchange="previewPicture(event)">
-
                 <small id="picture-error" class="text-danger d-block mt-1"></small>
-
             </div>
+
 
 
 
@@ -147,6 +150,10 @@
 
 <?php $__env->startPush('BODY_BOTTOM'); ?>
     <script>
+        document.querySelector('.photo-upload-container').addEventListener('click', function () {
+            document.getElementById('picture').click();
+        });
+
         function previewPicture(event) {
             const file = event.target.files[0];
             const maxSizeMB = 10; // Max 10 MB
@@ -170,12 +177,15 @@
             const reader = new FileReader();
             reader.onload = function () {
                 preview.src = reader.result;
+                removeBtn.style.display = 'block';
             };
             reader.readAsDataURL(file);
-            removeBtn.style.display = 'block';
+
         }
 
-        function removePicture() {
+        function removePicture(e) {
+            if (e) e.stopPropagation();
+
             const preview = document.getElementById('imagePreview');
             const fileInput = document.getElementById('picture');
             const removeFlag = document.getElementById('removePictureFlag');
@@ -195,7 +205,53 @@
         }
 
     </script>
+        <style>
+            .photo-upload-container {
+                cursor: pointer;
+                overflow: hidden;
+            }
 
+            .photo-upload-container .overlay {
+                background-color: rgba(0, 0, 0, 0.4);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .photo-upload-container:hover .overlay {
+                opacity: 1;
+            }
+
+            .object-fit-cover {
+                object-fit: cover;
+            }
+
+            .remove-btn {
+                width: 20px;
+                height: 20px;
+                background-color: #e0e0e0; /* Light gray */
+                border: none;
+                border-radius: 50%;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 1;
+                color: #333;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                padding: 0;
+                transition: background-color 0.2s ease;
+            }
+
+            .remove-btn:hover {
+                background-color: #ccc;
+            }
+            .photo-upload-container:hover #removeButton {
+                display: none !important;
+            }
+
+
+        </style>
 <?php $__env->stopPush(); ?>
 
 <?php echo $__env->make('layouts.step', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\cvmaker\resources\views/pages/steps/one.blade.php ENDPATH**/ ?>

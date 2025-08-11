@@ -29,7 +29,7 @@
             width: 100%;
             margin: 0 auto;
             position: relative;
-            padding-top: 15px;
+
         }
 
         table * {
@@ -55,7 +55,7 @@
         }
 
         .title {
-            padding-top: 20px;
+            padding-top: 10px;
             font-size: {{$cv->cv_text_size+4 ?? '18'}}px;
             font-weight: 400;
             text-transform: uppercase
@@ -65,7 +65,7 @@
             color: {{$cv->cv_color ?? '#2e5395'}};
             font-weight: bold;
             padding-bottom: 0;
-            padding-top: 20px;
+            padding-top: 5px;
             font-size: {{$cv->cv_text_size+9 ?? '23'}}px;
             text-transform: uppercase
         }

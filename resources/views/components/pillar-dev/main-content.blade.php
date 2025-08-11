@@ -24,15 +24,14 @@
         @isset($cv->jobs)
             @foreach ($cv->jobs as  $job)
                 <tr>
-                    <td style="padding-top: 20px"><span class="title">{{$job['job_title'] ?? ""}}</span></td>
+                    <td style="padding-top: 5px"><span class="title">{{$job['job_title'] ?? ""}}</span></td>
                 </tr>
                 <tr>
                     <td class="gray-text">{{$job['jobStartYear'] ?? ""}}{{isset($job['jobEndYear']) ? ' - '.$job['jobEndYear'] : ""}}</td>
                 </tr>
                 <tr>
-                    <td scope="col" style="padding-bottom: 10px">
+                    <td scope="col">
                         <span class="gray-text">{{$job['employer'] ?? ""}}{{isset($job['job_city']) ? ', '.$job['job_city'] : ""}}</span>
-                        <br> <br>
                         <p class="details">{!!str_replace("\n","<br/>",$job['details'] ?? "")!!}</p>
                     </td>
                 </tr>
@@ -57,9 +56,8 @@
                     <td scope="col">
                         <strong class="title">{{$education['degree'] ?? ""}}</strong>
                         <br>
-                        <br>
+                        <br/>
                         {{$education['university'] ?? ""}}{{isset($education['education_city']) ? ', '.$education['education_city'] : ""}}
-                        <br />
                         <p class="details">{!!str_replace("\n","<br/>",$education['details'] ?? "")!!}</p>
                     </td>
                 </tr>

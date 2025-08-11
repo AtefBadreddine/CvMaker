@@ -1,0 +1,13 @@
+a:8:{s:6:"_token";s:40:"VIjMdlhCkVpQj7l71oy3QVk2ih5XFaKHOhLPyjDK";s:8:"fileName";s:13:"6898cdcab786c";s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}s:11:"currentStep";i:5;s:9:"_previous";a:1:{s:3:"url";s:24:"http://127.0.0.1:8000/cv";}s:12:"selectedLang";s:2:"ar";s:16:"selectedTemplate";s:11:"orbital-dev";s:2:"cv";O:8:"stdClass":37:{s:5:"fresh";b:1;s:6:"_token";s:40:"VIjMdlhCkVpQj7l71oy3QVk2ih5XFaKHOhLPyjDK";s:14:"remove_picture";s:1:"0";s:4:"name";s:13:"emp01afaaaffa";s:5:"email";s:26:"atefbadreddine05@gmail.com";s:5:"phone";s:8:"26013369";s:11:"current_job";s:3:"Dev";s:7:"address";s:46:"cite el hana appt 1 Hedi nouira Ariana Tunisie";s:11:"nationality";s:5:"TUNIS";s:14:"marital_status";N;s:10:"birth_date";s:10:"05-05-2001";s:12:"cv_text_size";i:16;s:4:"uuid";O:35:"Ramsey\Uuid\Lazy\LazyUuidFromString":1:{s:6:"string";s:36:"9593dc99-5442-4b67-aaee-a68263a711a0";}s:7:"picture";s:21:"pic-6898d15f9f086.jpg";s:23:"education_section_title";s:9:"Education";s:10:"educations";a:1:{i:1;a:6:{s:6:"degree";s:9:"Engineera";s:10:"university";s:6:"Esprit";s:14:"education_city";s:6:"ariana";s:9:"startYear";s:10:"05-05-2001";s:7:"endYear";s:10:"05-05-2001";s:7:"details";s:43:"agzag
+• zgzgaz
+• zag
+• ag
+• aga";}}s:18:"jobs_section_title";s:11:"EXPERIENCES";s:4:"jobs";a:1:{i:1;a:6:{s:9:"job_title";s:15:"Developeur CIVP";s:8:"job_city";s:7:"chargia";s:7:"details";s:51:"FAZAZF
+• AAAAA
+• AAAAA
+• AAAAAAA
+• AAAA";s:8:"employer";s:5:"Tunav";s:12:"jobStartYear";s:10:"01-09-2025";s:10:"jobEndYear";s:10:"01-09-2027";}}s:19:"langs_section_title";s:12:"اللغات";s:20:"skills_section_title";s:16:"المهارات";s:21:"summary_section_title";s:25:"الملخص المهني";s:18:"profession_summary";s:61:"SU;;QRY ZLQYED KHQDE; NLAWEJ AALA BENT HLELT
+• aaaaaaaaaaa";s:19:"certs_section_title";s:16:"الشهادات";s:4:"cert";s:10:"aaaaaaaaaa";s:18:"refs_section_title";s:14:"المراجع";s:3:"ref";s:8:"azzzzzzz";s:23:"interests_section_title";s:39:"الإهتمامات والهوايات";s:18:"customSectionTitle";N;s:20:"customSectionDetails";N;s:14:"customSections";a:1:{i:1;a:2:{s:18:"customSectionTitle";s:4:"taaa";s:20:"customSectionDetails";s:28:"zz
+• zdfzf
+• zf
+• z";}}s:8:"language";N;s:5:"level";s:10:"مبتدئ";s:5:"skill";N;s:8:"interest";N;s:9:"languages";a:3:{i:1;a:2:{s:8:"language";s:6:"arabic";s:5:"level";s:10:"مبتدئ";}i:2;a:2:{s:8:"language";s:7:"english";s:5:"level";s:2:"B2";}i:3;a:2:{s:8:"language";s:6:"french";s:5:"level";s:10:"مبتدئ";}}s:6:"skills";a:3:{i:1;a:1:{s:5:"skill";s:3:"dev";}i:2;a:1:{s:5:"skill";s:4:"dada";}i:3;a:1:{s:5:"skill";s:3:"aaa";}}s:9:"interests";a:2:{i:1;a:1:{s:8:"interest";s:6:"aaaaaa";}i:2;a:1:{s:8:"interest";s:5:"bbbbb";}}}}

@@ -131,7 +131,7 @@
             font-size: {{$cv->cv_text_size ?? '14'}}px; !important;
             font-weight:300;
             color: #545E6C;
-            padding-top: 10px
+
         }
 
         .top-section

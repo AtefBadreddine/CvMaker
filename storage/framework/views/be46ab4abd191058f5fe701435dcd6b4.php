@@ -42,7 +42,7 @@
             width: 100%;
             margin: 0 auto;
             position: relative;
-            padding-top: 15px;
+
         }
 
         table * {
@@ -100,11 +100,9 @@
 
         table th.section-title {
             color: <?php echo e($cv->cv_color ?? '#004a89'); ?>;
-            padding-bottom: 0;
-            padding-top: 20px;
             font-size: <?php echo e($cv->cv_text_size+6 ?? '20'); ?>px;
             font-weight: 500;
-            padding-bottom: 10px;
+
         }
 
         .sidebar table td,
@@ -149,7 +147,7 @@
 
         .sidebar table
         {
-            margin-bottom: 20px;
+            margin-bottom: 0;
         }
 
         table td .details,
@@ -158,7 +156,7 @@
             font-size: <?php echo e($cv->cv_text_size ?? '14'); ?>px; !important;
             font-weight:300;
             color: #545E6C;
-            padding-top: 10px
+
         }
 
         .top-section

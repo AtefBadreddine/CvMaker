@@ -38,7 +38,7 @@
                     <tr>
                         <td scope="col" style="padding-top: 0">
                             {{isset($job['job_city']) ? $job['job_city'] . ' , ' : ""}}{{isset($job['jobStartYear']) ? $job['jobStartYear'] . ' - ' : ""}}{{$job['jobEndYear'] ?? ""}}
-                            <p style="padding-top: 10px">{!!str_replace("\n","<br/>",$job['details'] ?? "")!!}</p>
+                            <p style="padding-top: 5px">{!!str_replace("\n","<br/>",$job['details'] ?? "")!!}</p>
                         </td>
                     </tr>
                 @endforeach
@@ -63,7 +63,7 @@
                             <strong class="title">{{$education['degree'] ?? ""}}{{isset($education['university']) ? ', '.$education['university'] : ""}}</strong>
                             <br>
                             {{isset($education['education_city']) ? $education['education_city'] . ' , ' : ""}}{{isset($education['startYear']) ? $education['startYear'] . ' - ' : ""}}{{$education['endYear'] ?? ""}}
-                            <p style="padding-top: 10px">{!!str_replace("\n","<br/>",$education['details'] ?? "")!!}</p>
+                            <p style="padding-top: 5px">{!!str_replace("\n","<br/>",$education['details'] ?? "")!!}</p>
                         </td>
                     </tr>
                 @endforeach

@@ -6,7 +6,7 @@
     </thead>
     <tbody>
     <tr>
-        <td style="padding-top:5px"><?php echo e($cv->current_job ?? ""); ?></td>
+        <td ><?php echo e($cv->current_job ?? ""); ?></td>
     </tr>
     </tbody>
 </table>
@@ -37,7 +37,7 @@
                     <td style="padding-bottom:0;padding-top:5px"><span><?php echo e($job['jobStartYear'] ?? ""); ?><?php echo e(isset($job['jobEndYear']) ? ' - '.$job['jobEndYear'] : ""); ?><?php echo e(isset($job['job_city']) ? ' | '.$job['job_city'] : ""); ?></span></td>
                 </tr>
                 <tr>
-                    <td style="padding-top:5px"><p class="details"><?php echo str_replace("\n","<br/>",$job['details'] ?? ""); ?></p></td>
+                    <td><p class="details"><?php echo str_replace("\n","<br/>",$job['details'] ?? ""); ?></p></td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         <?php endif; ?>
@@ -62,7 +62,7 @@
                     <td style="padding-bottom:0;padding-top:5px"><?php echo e($education['degree'] ?? ""); ?><?php echo e(isset($education['endYear']) ? ', '.$education['endYear'] : ""); ?></td>
                 </tr>
                 <tr>
-                    <td style="padding-top:10px"><p class="details"><?php echo str_replace("\n","<br/>",$education['details'] ?? ""); ?></p></td>
+                    <td><p class="details"><?php echo str_replace("\n","<br/>",$education['details'] ?? ""); ?></p></td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         <?php endif; ?>
@@ -75,7 +75,7 @@
         <table >
             <thead>
             <tr>
-                <th scope="col" class="section-title" style="padding-bottom:20px;padding-top:20px"><?php echo e($section['customSectionTitle'] ?? ""); ?></th>
+                <th scope="col" class="section-title" ><?php echo e($section['customSectionTitle'] ?? ""); ?></th>
             </tr>
             </thead>
             <tbody>

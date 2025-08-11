@@ -14,15 +14,21 @@
         <form class="row " id="stepsForm" method="POST" action="<?php echo e(route('step.processingFour')); ?>">
             <?php echo csrf_field(); ?>
             <div class="card border-0 p-md-5 p-sm-1">
-                <div class="card-header bg-white d-flex justify-content-between flex-wrap">
+                <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center border-bottom border-secondary-subtle py-3">
                     <div class="w-100">
-                        <h4 class="d-flex align-items-center">
-                            <i class="bi bi-translate"></i>
-                          	<input type="text" class="w-100 form-control rounded-pill border-1 fs-5 mx-1" name="langs_section_title" value="<?php echo e(__('pdf-sections.languages')); ?>" placeholder="<?php echo e(__('pdf-sections.languages')); ?>" />
+                        <h4 class="d-flex align-items-center mb-1">
+                            <i class="bi bi-translate fs-4 text-primary"></i>
+                            <input type="text"
+                                   class="form-control form-control-lg rounded-pill border-1 ms-2 fs-4 fw-semibold bg-white"
+                                   name="langs_section_title"
+                                   value="<?php echo e(__('pdf-sections.languages')); ?>"
+                                   placeholder="<?php echo e(__('pdf-sections.languages')); ?>"
+                                   aria-label="Section Title" />
                         </h4>
-                        <small class="text-muted"><?php echo e(__('pdf-sections.languages_desc')); ?></small>
+                        <small class="text-muted fst-italic"><?php echo e(__('pdf-sections.languages_desc')); ?></small>
                     </div>
                 </div>
+
                 <div id="collapse1">
                     <div class="card-body">
                         <div id="languages" class="row g-3 structure align-items-center" style="display:none">
@@ -93,13 +99,16 @@
             </div>
 
             <div class="card border-0 p-md-5 p-sm-1">
-                <div class="card-header bg-white d-flex justify-content-between flex-wrap">
+                <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center border-bottom border-secondary-subtle py-3">
                     <div class="w-100">
-                        <h4 class="d-flex align-items-center">
-                            <i class="bi bi-magic"></i>
-                          	<input type="text" class="w-100 form-control rounded-pill border-1 fs-5 mx-1" name="skills_section_title" value="<?php echo e(__('pdf-sections.skills')); ?>" placeholder="<?php echo e(__('pdf-sections.skills')); ?>" />
+                        <h4 class="d-flex align-items-center mb-1">
+                            <i class="bi bi-magic fs-4 text-primary"></i>
+                            <input type="text"
+                                   class="form-control form-control-lg rounded-pill border-1 ms-2 fs-4 fw-semibold bg-white"
+                                   name="skills_section_title" value="<?php echo e(__('pdf-sections.skills')); ?>" placeholder="<?php echo e(__('pdf-sections.skills')); ?>"
+                                   aria-label="Section Title" />
                         </h4>
-                        <small class="text-muted"><?php echo e(__('pdf-sections.skills_desc')); ?></small>
+                        <small class="text-muted fst-italic"><?php echo e(__('pdf-sections.skills_desc')); ?></small>
                     </div>
                 </div>
                 <div id="collapse2">
@@ -142,15 +151,18 @@
             </div>
 
           <div class="card border-0 p-md-5 p-sm-1">
-                <div class="card-header bg-white d-flex justify-content-between flex-wrap">
-                    <div class="w-100">
-                        <h4 class="d-flex align-items-center">
-                            <i class="bi bi-moon-stars-fill"></i>
-                          <input type="text" class="w-100 form-control rounded-pill border-1 fs-5 mx-1" name="summary_section_title" value="<?php echo e(__('pdf-sections.summary')); ?>" placeholder="<?php echo e(__('pdf-sections.summary')); ?>" />
-                        </h4>
-                        <small class="text-muted"><?php echo e(__('pdf-sections.summary_desc')); ?></small>
-                    </div>
-                </div>
+              <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center border-bottom border-secondary-subtle py-3">
+                  <div class="w-100">
+                      <h4 class="d-flex align-items-center mb-1">
+                          <i class="bi bi-moon-stars-fill fs-4 text-primary"></i>
+                          <input type="text"
+                                 class="form-control form-control-lg rounded-pill border-1 ms-2 fs-4 fw-semibold bg-white"
+                                 name="summary_section_title" value="<?php echo e(__('pdf-sections.summary')); ?>" placeholder="<?php echo e(__('pdf-sections.summary')); ?>"
+                                 aria-label="Section Title" />
+                      </h4>
+                      <small class="text-muted fst-italic"><?php echo e(__('pdf-sections.summary_desc')); ?></small>
+                  </div>
+              </div>
                 <div class="card-body">
                     <div class="row g-3">
                         <div class="col-md-12">
@@ -163,13 +175,16 @@
             </div>
 
             <div class="card border-0 p-md-5 p-sm-1 collapse <?php if(isset($cv->cert)): ?> show <?php endif; ?>" id="collapseCerts">
-                <div class="card-header bg-white d-flex justify-content-between flex-wrap">
-                    <div>
-                        <h4 class="d-flex align-items-center">
-                            <i class="bi bi-bank"></i>
-                            <input type="text" style="width:580px" class="form-control rounded-pill border-1 fs-5 mx-1" name="certs_section_title" value="<?php echo e(__('pdf-sections.certs')); ?>" placeholder="<?php echo e(__('pdf-sections.certs')); ?>" />
+                <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center border-bottom border-secondary-subtle py-3">
+                    <div class="w-100">
+                        <h4 class="d-flex align-items-center mb-1">
+                            <i class="bi bi-bank fs-4 text-primary"></i>
+                            <input type="text"
+                                   class="form-control form-control-lg rounded-pill border-1 ms-2 fs-4 fw-semibold bg-white"
+                                   name="certs_section_title" value="<?php echo e(__('pdf-sections.certs')); ?>" placeholder="<?php echo e(__('pdf-sections.certs')); ?>"
+                                   aria-label="Section Title" />
                         </h4>
-                        <small class="text-primary"><?php echo e(__('pdf-sections.optional_section')); ?></small>
+                        <small class="text-primary fst-italic"><?php echo e(__('pdf-sections.optional_section')); ?></small>
                     </div>
                 </div>
                 <div id="collapse6">
@@ -212,13 +227,16 @@
             </div>
 
             <div class="card border-0 p-md-5 p-sm-1  collapse <?php if(isset($cv->ref)): ?> show <?php endif; ?>" id="collapseRefs">
-                <div class="card-header bg-white d-flex justify-content-between flex-wrap">
-                    <div>
-                        <h4 class="d-flex align-items-center">
-                            <i class="bi bi-pen"></i>
-                            <input type="text" style="width:580px" class="form-control rounded-pill border-1 fs-5 mx-1" name="refs_section_title" value="<?php echo e(__('pdf-sections.refs')); ?>" placeholder="<?php echo e(__('pdf-sections.refs')); ?>" />
+                <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center border-bottom border-secondary-subtle py-3">
+                    <div class="w-100">
+                        <h4 class="d-flex align-items-center mb-1">
+                            <i class="bi bi-pen fs-4 text-primary"></i>
+                            <input type="text"
+                                   class="form-control form-control-lg rounded-pill border-1 ms-2 fs-4 fw-semibold bg-white"
+                                   name="refs_section_title" value="<?php echo e(__('pdf-sections.refs')); ?>" placeholder="<?php echo e(__('pdf-sections.refs')); ?>"
+                                   aria-label="Section Title" />
                         </h4>
-                        <small class="text-primary"><?php echo e(__('pdf-sections.optional_section')); ?></small>
+                        <small class="text-primary fst-italic"><?php echo e(__('pdf-sections.optional_section')); ?></small>
                     </div>
                 </div>
                 <div id="collapse9">
@@ -265,13 +283,16 @@
 
 
             <div class="card border-0 p-md-5 p-sm-1  collapse <?php if(isset($cv->interests)): ?> show <?php endif; ?>" id="collapseInterests">
-                <div class="card-header bg-white d-flex justify-content-between flex-wrap">
-                    <div>
-                        <h4 class="d-flex align-items-center">
-                            <i class="bi bi-bag-heart-fill"></i>
-                          <input type="text" style="width:580px" class="form-control rounded-pill border-1 fs-5 mx-1" name="interests_section_title" value="<?php echo e(__('pdf-sections.interests')); ?>" placeholder="<?php echo e(__('pdf-sections.intersts')); ?>" />
+                <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center border-bottom border-secondary-subtle py-3">
+                    <div class="w-100">
+                        <h4 class="d-flex align-items-center mb-1">
+                            <i class="bi bi-bag-heart-fill fs-4 text-primary"></i>
+                            <input type="text"
+                                   class="form-control form-control-lg rounded-pill border-1 ms-2 fs-4 fw-semibold bg-white"
+                                   name="interests_section_title" value="<?php echo e(__('pdf-sections.interests')); ?>" placeholder="<?php echo e(__('pdf-sections.intersts')); ?>"
+                                   aria-label="Section Title" />
                         </h4>
-                        <small class="text-primary"><?php echo e(__('pdf-sections.optional_section')); ?></small>
+                        <small class="text-primary fst-italic"><?php echo e(__('pdf-sections.optional_section')); ?></small>
                     </div>
                 </div>
                 <div id="collapse3">
@@ -314,16 +335,22 @@
             </div>
 
             <div class="card border-0 p-md-5 p-sm-1  structure" id="customSections" style="display: none">
-                <div class="card-header bg-white d-flex justify-content-between flex-wrap">
-                    <div>
-                        <h4 class="d-flex">
-                            <i class="bi bi-bandaid mt-2"></i>
-                            <input type="text" style="580px" name="customSectionTitle" value="<?php echo e(old('customSectionTitle') ?? ($cv->customSectionTitle ?? '')); ?>" class="form-control rounded-pill form-control-lg mx-2 vertical-align-middle border-1" placeholder="<?php echo e(__('labels.customSectionTitle')); ?>" />
+                <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center border-bottom border-secondary-subtle py-3">
+                    <div class="w-100">
+                        <h4 class="d-flex align-items-center mb-1">
+                            <i class="bi bi-bandaid fs-4 text-primary"></i>
+                            <input type="text"
+                                   class="form-control form-control-lg rounded-pill border-1 ms-2 fs-4 fw-semibold bg-white"
+                                   name="customSectionTitle" value="<?php echo e(old('customSectionTitle') ?? ($cv->customSectionTitle ?? '')); ?>"   placeholder="<?php echo e(__('labels.customSectionTitle')); ?>"
+                                   aria-label="Section Title" />
                         </h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-primary fst-italic"><?php echo e(__('pdf-sections.optional_section')); ?></small>
+                            <button type="button" class="btn btn-outline-danger border-0 removeElement">
+                                <i class="bi bi-trash3 fs-5 mx-2"></i>
+                            </button>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-outline-danger border-0 removeElement">
-                        <i class="bi bi-trash3 fs-5 mx-2"></i>
-                    </button>
                 </div>
                 <div class="card-body">
                     <div class="row g-3">
@@ -340,22 +367,33 @@
                 <?php if(isset($cv->customSections)): ?>
                     <?php $__currentLoopData = $cv->customSections; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $section): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="card shadow border-0 p-md-5 p-sm-1 mt-5 structure deletable" id="customSections">
-                            <div class="card-header bg-white d-flex justify-content-between flex-wrap">
-                                <div>
-                                    <h4 class="d-flex">
-                                        <i class="bi bi-bandaid mt-2"></i>
-                                        <input type="text" name="customSections[<?php echo e($loop->iteration); ?>][customSectionTitle]" value="<?php echo e($section['customSectionTitle']); ?>" class="form-control form-control-lg mx-2 vertical-align-middle border-0 w-100 px-0" />
-                                    </h4>
-                                </div>
-                                <button type="button" class="btn btn-outline-danger border-0 removeElement">
-                                    <i class="bi bi-trash3 fs-5 mx-2"></i>
-                                </button>
-                            </div>
+
+                               <div class="card-header bg-light d-flex justify-content-between flex-wrap align-items-center border-bottom border-secondary-subtle py-3">
+                    <div class="w-100">
+                        <h4 class="d-flex align-items-center mb-1">
+                            <i class="bi bi-bandaid fs-4 text-primary"></i>
+                            <input type="text"
+                                   class="form-control form-control-lg rounded-pill border-1 ms-2 fs-4 fw-semibold bg-white"
+                                   name="customSections[<?php echo e($loop->iteration); ?>][customSectionTitle]" value="<?php echo e($section['customSectionTitle']); ?>"  placeholder="<?php echo e(__('labels.customSectionTitle')); ?>"
+                                   aria-label="Section Title" />
+                        </h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                               <small class="text-primary fst-italic"><?php echo e(__('pdf-sections.optional_section')); ?></small>
+                        <button type="button" class="btn btn-outline-danger border-0 removeElement">
+                            <i class="bi bi-trash3 fs-5 mx-2"></i>
+                        </button>
+                        </div>
+
+                    </div>
+                </div>
                             <div class="card-body">
                                 <div class="row g-3">
                                     <div class="col-md-12">
-                                        <label for="textareaDetails1" class="form-label"><?php echo e(__('labels.details')); ?></label>
+                                        <div class="d-flex justify-content-between mb-2">
+                                               <label for="textareaDetails1" class="form-label"><?php echo e(__('labels.details')); ?></label>
                                       	<button class="btn btn-sm btn-primary addBullet" type="button"><?php echo e(__('labels.add_bullet')); ?> •</button>
+                                        </div>
+
                                         <textarea class="form-control" id="textareaDetails1" rows="3" name="customSections[<?php echo e($loop->iteration); ?>][customSectionDetails]"><?php echo e($section['customSectionDetails']); ?></textarea>
                                     </div>
                                 </div>
